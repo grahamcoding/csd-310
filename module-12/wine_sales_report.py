@@ -1,5 +1,10 @@
 import mysql.connector
 from dotenv import dotenv_values
+# added code to generate the date and time of the report
+from datetime import datetime
+now = datetime.now()
+report_time = now.strftime("%m-%d-%Y %I:%M %p")
+print(f"Report generated on: {report_time}\n")
 
 secrets = dotenv_values(".env")
 
